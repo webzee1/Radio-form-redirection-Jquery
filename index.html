@@ -27,6 +27,8 @@
       <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Yahoo"/>
         <label class="form-check-label" for="inlineRadio2">Yahoo</label>
       </div>
+
+
       
       <!-- Submit Button  -->
       
@@ -34,13 +36,16 @@
    
    </form>
 
+
+
+
+
 </div>
   
 
   
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-
 
   <script type="text/javascript">
     (function ($) {
@@ -68,16 +73,31 @@
       $('.button-submit').attr('value', 'Processing...');
 
          var radioValue = $('input:radio:checked').val(); //Radio Button Value
+
+         //sessionStorage.setItem("radio", radioValue);
+
         
          if(radioValue == 'Google'){
           setTimeout(function() {
-          window.location.href = 'https://www.google.com';
+
+          sessionStorage.setItem("radio", radioValue); // Set Session Storage to get Radio value on page2.html
+         
+          $('.radio-form')[0].reset(); // Reset form 
+
+          window.location.href = 'page2.html';
      }, 2000);
              
+
+
          }
          if(radioValue == 'Yahoo'){
           setTimeout(function() {
-         window.location.href = 'https://www.yahoo.com';
+
+            sessionStorage.setItem("radio", radioValue);
+         
+            $('.radio-form')[0].reset();
+
+         window.location.href = 'page3.html';
      }, 2000);
               
          }
@@ -86,6 +106,18 @@
 
 
   })(jQuery);
+
+
+
+
+
+
+
+  
+
+  
+  
+
 
   </script>
 

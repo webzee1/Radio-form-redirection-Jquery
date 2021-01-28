@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Radio Form Redirection</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<div class="container mt-5">
+
+  <div id="result-radio"></div>
+</div>
+
+  
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+ 
+<script type="text/javascript">
+   window.addEventListener('load', () => {
+
+    const radio = sessionStorage.getItem('radio'); // Getting Session Storage Value
+        
+    document.getElementById('result-radio').innerHTML = radio; // Displaying Value
+   
+
+})
+</script>
+
+
+ 
+
+</body>
+</html>
